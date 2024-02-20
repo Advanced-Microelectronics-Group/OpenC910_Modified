@@ -19,8 +19,8 @@ include ./setup/env_check.mk
 ################################################################################
 # Simulation related
 ################################################################################
-SIM = vcs
-DUMP = on
+SIM = iverilog
+DUMP = off
 THREADS = 4
 
 # Generate C++ in executable form
@@ -81,7 +81,7 @@ endif
 
 ifeq ($(SIM), vcs)
 TIMESCALE := -timescale=1ns/100fs
-SIMULATOR_OPT := -sverilog -full64 -kdb -top tb -debug_acc+all+dmptf -debug_region+cell+encrypt +lint=TFIPC-L
+SIMULATOR_OPT := -sverilog -full64 -kdb -lca -debug_access +nospecify +notimingchecks +lint=TFIPC-L
 SIMULATOR_DEF := +define+no_warning +define+TSMC_NO_WARNING
 SIMULATOR_LOG := -l comp.vcs.log
 ifeq ($(UPF), on)
@@ -199,7 +199,7 @@ ifeq ($(CASE),)
         $(newline)   > make showcase ...)
 endif
 ifeq ($(findstring $(CASE), $(CASE_LIST)), $(CASE))
-#	@make -s compile
+	@make -s compile
 	@make -s buildcase CASE=$(CASE)
 ifeq ($(SIM), vcs)
 	cd ./work && ./simv -l run.vcs.log $(SIMV_POWER_OPT)
@@ -268,11 +268,11 @@ help:
 	@echo "    make runcase CASE=dhry          : run case 'dhry' (by iverilog withtout dump) "; 
 	@echo "    make runcase CASE=dhry SIM=nc   : run case 'dhry' (by nc withtout dump) "; 
 	@echo "    make runcase CASE=dhry DUMP=on  : run case 'dhry' with dump "; 
-	@echo "    make runcase CASE=coremark SIM=verilator THREADS=8 	: run case 'coremark' without dump(by verilator) with 8 threads ";
-	@echo "    make cleanVerilator		   			: clean the verilator generated file before Verilator operations ";
-	@echo "    make compile SIM=verilator DUMP=on THREADS=8  	: run compile with dump (by Verilator with dump) with 8 threads ";
-	@echo "    make buildVerilator             			: run build executable file with Verilator ";
-	@echo "    make runVerilator	           			: run simulation file with Verilator ";
+	@echo "    make runcase CASE=coremark SIM=verilator THREADS=8 	: run case 'coremark' without dump(by verilator) with 8 threads";
+	@echo "    make cleanVerilator		   			: clean the verilator generated file before Verilator operations";
+	@echo "    make compile SIM=verilator DUMP=on THREADS=8  	: run compile with dump (by Verilator with dump) with 8 threads";
+	@echo "    make buildVerilator             			: run build executable file with Verilator";
+	@echo "    make runVerilator	           			: run simulation file with Verilator";
 	
-debug	:
-		verdi -nologo +v2k -elab ./work/simv.daidir/kdb.elab++ -ssy -ssv -ssf ./work/novas.fsdb &
+
+
