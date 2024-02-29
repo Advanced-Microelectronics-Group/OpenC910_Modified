@@ -16,10 +16,13 @@
 include ./setup/smart_cfg.mk
 include ./setup/env_check.mk
 
+export CODE_BASE_PATH=$(shell pwd)/../C910_RTL_FACTORY/
+export TOOL_EXTENSION=$(shell pwd)/../../Xuantie-900-gcc-elf-newlib-x86_64-V2.8.1/bin
+
 ################################################################################
 # Simulation related
 ################################################################################
-SIM = iverilog
+SIM = vcs
 DUMP = off
 THREADS = 4
 
@@ -273,6 +276,3 @@ help:
 	@echo "    make compile SIM=verilator DUMP=on THREADS=8  	: run compile with dump (by Verilator with dump) with 8 threads";
 	@echo "    make buildVerilator             			: run build executable file with Verilator";
 	@echo "    make runVerilator	           			: run simulation file with Verilator";
-	
-
-
