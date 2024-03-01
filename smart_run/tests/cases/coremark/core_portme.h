@@ -79,7 +79,8 @@ typedef signed int ee_s32;
 typedef double ee_f32;
 typedef unsigned char ee_u8;
 typedef unsigned int ee_u32;
-typedef ee_u32 ee_ptr_int;
+typedef unsigned long ee_ptr_int;
+//typedef ee_u32 ee_ptr_int;
 // typedef size_t ee_size_t;
 typedef unsigned int ee_size_t;
 
