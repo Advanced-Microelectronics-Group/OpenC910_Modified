@@ -138,13 +138,13 @@ sleep_build:
 
 # Adjust verilog filelist for *.v case...
 ifeq ($(CASE), debug_gpr)
-SIM_FILELIST := ../tests/cases/debug/debug_gpr/had_drv.vh ../tests/cases/debug/debug_gpr/debug_read_write_gpr.v
+SIM_FILELIST := ../tests/cases/debug/debug_gpr/had_drv.vh ../tests/cases/debug/debug_gpr/debug_read_write_gpr.sv
 endif
 ifeq ($(CASE), debug_memory)
-SIM_FILELIST := ../tests/cases/debug/debug_memory/had_drv.vh ../tests/cases/debug/debug_memory/debug_read_write_memory.v
+SIM_FILELIST := ../tests/cases/debug/debug_memory/had_drv.vh ../tests/cases/debug/debug_memory/debug_read_write_memory.sv
 endif
 ifeq ($(CASE), plic_int)
-SIM_FILELIST := ../tests/cases/interrupt/int_smoke/ct_plic_int_smoke_hw.v
+SIM_FILELIST := ../tests/cases/interrupt/int_smoke/ct_plic_int_smoke_hw.sv
 endif
 ifeq ($(CASE), sleep)
 SIM_FILELIST := ../tests/cases/sleep/sleep_test.vh
