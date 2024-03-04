@@ -1,0 +1,17 @@
+
+ Block      Pattern                   Result
+---------------------------------------------
+0         ISA_AMO                        PASS
+1         smoke_bus                      PASS
+2         ISA_THEAD                      PASS
+3         cache_op                       PASS
+4         ISA_IMAC                     =>FAIL
+5         coremark                       PASS
+6         hello_world                    PASS
+7         MMU                            PASS
+8         csr                            PASS
+9         ISA_BARRIER                    PASS
+10        sleep                          PASS
+---------------------------------------------
+ Not run   Pass   Fail   Total
+   0       10      1      11

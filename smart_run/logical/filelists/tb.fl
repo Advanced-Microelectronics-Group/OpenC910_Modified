@@ -17,5 +17,5 @@ limitations under the License.
 +incdir+../logical/tb+
 
 -y ../logical/tb
-../logical/tb/tb.v
+../logical/tb/tb.sv
 
