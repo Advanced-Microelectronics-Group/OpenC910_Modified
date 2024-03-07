@@ -1,0 +1,3 @@
+current_design cpu_sub_system_axi
+sdc_data -file ../impl/sdc/openC910.sdc
+
