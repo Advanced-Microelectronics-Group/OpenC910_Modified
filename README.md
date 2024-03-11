@@ -1,31 +1,29 @@
 ## Introduce
 
-This is a C910 (64bit risc-v design by T-head) modified core, we will do something based on C910 first, verilog into systemverilog,improve simulation flow,such us cosim and hw/sw debug,optimize c910 microarchitecture.
+This is a modified 64-bit RISC-V core designed by T-head, known as C910. Our team is trying to swift the HDL from Verilog to SystemVerilog, optimize its microarchitecture, and improve the simulation flow such as cosim and HW/SW debug.
 
 ## To Do
 
-| task                              | status      |
+| Task                              | Status      |
 | --------------------------------- | ----------- |
-| `lint flow`                       | in progress |
-| `fpga syn flow`                   | in progress |
-| `syn flow`                        | in progress |
-| `cosim environment(spike)`        | in progress |
-| `change verilog to systemverilog` | in progress |
-| `optimize microarchitecture`      | in progress |
-| `random instructions case`        | in progress |
-| `hw/sw debug`                     | in progress |
+| `lint flow`                       | In progress |
+| `fpga syn flow`                   | In progress |
+| `syn flow`                        | In progress |
+| `cosim environment(spike)`        | In progress |
+| `change verilog to systemverilog` | In progress |
+| `optimize microarchitecture`      | In progress |
+| `random instructions case`        | In progress |
+| `hw/sw debug`                     | In progress |
 
-`note:`We may just support business eda ,it does not mean that we use business eda to test this project and flow.We do not make any technical commitments or guarantees to you.We are in the initial stages of the project,and will design our own RV64 core  in feature.
+**Note:** The project might support the commercial EDA tools but it does not mean that any commercial EDA had been used throughout this project and the flow. None of the technical commitments or guarantees will be promised by the team. Currently, the project is in the initial stages and the target of the team is to design an unique RV64 core in the future.
 
 ## How to run
 
-1、 Download `Xuantie-900-gcc-elf-newlib-x86_64-V2.8.1-20240115.tar.gz`(or other version) from `https://www.xrvm.cn/community/download?id=4090445921563774976`（login is required），and unpack `Xuantie-900-gcc-elf-newlib-x86_64-V2.8.1-20240115.tar.gz` in `OpenC910_Modified` directory or other directory,but you should modify the path of `Xuantie-900-gcc-elf-newlib-x86_64-V2.8.1` in `OpenC910_Modified/smart_run/Makefile`.
-
-2、$`cd` OpenC910_Modified/smart_run
-
- $`make showcase`,it will show you which case you can run
-
-$`make help`,it will show you how to run case.
+1. Download `Xuantie-900-gcc-elf-newlib-x86_64-V2.8.1-20240115.tar.gz` (or other version) from either [XuanTieC910 Official](https://www.xrvm.cn/community/download?id=4090445921563774976) or [OpenC910 GitHub](https://github.com/T-head-Semi/openc910.git)
+2. Unpack `Xuantie-900-gcc-elf-newlib-x86_64-V2.8.1-20240115.tar.gz` in `OpenC910_Modified` directory or other directory, but you should modify the path of `Xuantie-900-gcc-elf-newlib-x86_64-V2.8.1` in `OpenC910_Modified/smart_run/Makefile`
+3. $`cd OpenC910_Modified/smart_run`
+4. $`make showcase` will show you which case you can run
+5. $`make help` will show you how to run case
 
 ## About us
 
