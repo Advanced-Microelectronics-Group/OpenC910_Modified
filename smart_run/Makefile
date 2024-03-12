@@ -17,8 +17,8 @@ include ./setup/smart_cfg.mk
 include ./setup/env_check.mk
 
 # you should remove the "#" and change the path to yours
-#export CODE_BASE_PATH=$(shell pwd)/../C910_RTL_FACTORY/
-#export TOOL_EXTENSION=$(shell pwd)/../../Xuantie-900-gcc-elf-newlib-x86_64-V2.8.1/bin
+export CODE_BASE_PATH=$(shell pwd)/../C910_RTL_FACTORY/
+export TOOL_EXTENSION=$(shell pwd)/../../Xuantie-900-gcc-elf-newlib-x86_64-V2.8.1/bin
 
 ################################################################################
 # Simulation related
