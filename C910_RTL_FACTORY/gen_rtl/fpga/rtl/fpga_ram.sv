@@ -22,13 +22,12 @@ module fpga_ram #(
         input           [(DATAWIDTH-1):0]   PortADataIn,
         input                               PortAWriteEnable,
         //input                             PortAChipEnable,
-        output          [(DATAWIDTH-1):0]   PortADataOut
+        output reg      [(DATAWIDTH-1):0]   PortADataOut
     );
 
     localparam          MEMDEPTH            = 2**(ADDRWIDTH);
 
     reg                 [(DATAWIDTH-1):0]   mem [(MEMDEPTH-1):0] /* synthesis syn_ramstyle = "no_rw_check" */;
-    reg                 [(DATAWIDTH-1):0]   PortADataOut;
 
     always @ (posedge PortAClk) begin
         if (PortAWriteEnable) begin
