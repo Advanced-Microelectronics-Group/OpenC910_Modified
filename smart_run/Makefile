@@ -85,7 +85,7 @@ endif
 
 ifeq ($(SIM), vcs)
 TIMESCALE := -timescale=1ns/100fs
-SIMULATOR_OPT := -sverilog -full64 -kdb -lca -debug_access +nospecify +notimingchecks +lint=TFIPC-L
+SIMULATOR_OPT := -sverilog -full64 -kdb -lca -debug_access +nospecify +notimingchecks +lint=TFIPC-L +error+1000
 SIMULATOR_DEF := +define+no_warning +define+TSMC_NO_WARNING
 SIMULATOR_LOG := -l comp.vcs.log
 ifeq ($(UPF), on)
