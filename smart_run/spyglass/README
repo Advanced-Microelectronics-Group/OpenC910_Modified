@@ -1,10 +1,2 @@
-
-step 1
-    > lmg
-step 2
-    > csh
-step 3
-    > source env
-step 4
-    > spyglass -tcl c910_test.tcl
+spyglass -tcl c910_test.tcl
 
